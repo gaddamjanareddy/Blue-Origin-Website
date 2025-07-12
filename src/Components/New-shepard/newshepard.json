@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Crew Capsule",
+    "description": "Pressurized crew capsule with room for six people, environmentally controlled for comfort, and among the largest windows to have flown in space."
+  },
+  {
+    "id": 2,
+    "title": "Ring & Wedge Fins",
+    "description": "Aerodynamically designed to stabilize the booster and reduce fuel use on its flight back to Earth."
+  },
+  {
+    "id": 3,
+    "title": "Drag Brakes",
+    "description": "Deploy from the ring fin to reduce the booster's speed by half on its descent from space."
+  },
+  {
+    "id": 4,
+    "title": "BE-3PM Engine",
+    "description": "Propels the rocket to space and restarts to uniquely slow the booster down to just 6 mph (9.7 km/h) for a controlled pinpoint landing on the pad."
+  },
+  {
+    "id": 5,
+    "title": "Aft Fins",
+    "description": "Stabilize the vehicle during ascent, steer it back to the landing pad on descent, and guide the rocket through airspeeds over Mach 3."
+  },
+  {
+    "id": 6,
+    "title": "Landing Gear",
+    "description": "Deploys for touchdown."
+  }
+]

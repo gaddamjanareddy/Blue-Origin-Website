@@ -1,0 +1,242 @@
+.flytospace-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+}
+.flyTo-space-section{
+    padding-top: 94px;
+    height: 100vh;
+    width: 100%;
+}
+
+.flyTo-space-container{
+    background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FReserveASeat_newshepard-interior-view.jpg&w=1920&q=75");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:end;
+    align-items: center;
+    gap: 65px;
+}
+@font-face {
+  font-family: 'title-MyFont';
+  src: local('title-MyFont'), url('../../assets/fonts/Barlow-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'title2-MyFont';
+  src: local('title2-MyFont'), url('../../assets/fonts/Barlow-Light.ttf') format('truetype');
+}
+.flyTo-space-content-top{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0px 30px ;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+.flyTo-space-title{
+    font-size: 95px;
+    font-family: 'title-MyFont';
+}
+.flyTo-space-title2 p{
+    font-size: 36px;
+    font-family: 'title2-MyFont';
+}
+/* .flyTo-space-title2{
+    
+} */
+.down-arrow img{
+    height: 100px;
+    width: 170px;
+}
+
+/* Booking Section */
+.booking-section{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 120px 30px;
+}
+.booking-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* form */
+.thankyou-title-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.thankyou-title-container h1{
+    font-size: 36px;
+    color: #FFFFFF;
+}
+.booking-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.customer-information-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.customer-information-title{
+    font-size: 24px;
+}
+.required-field{
+    font-size: 18px;
+}
+.required-star{
+    text-decoration: none;
+    font-weight: 800;
+}
+.booking-form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.left-right-input-container{
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-container label{
+    font-size: 16px;
+    font-weight: 700;
+}
+.input-container input{
+    display: flex;
+    width: 100%;
+    padding: 14px 0px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+.double-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+}
+.double-input-container label{
+    font-size: 16px;
+    font-weight: 700;
+}
+.double-input-container input{
+    display: flex;
+    width: 100%;
+    padding: 14px 0px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+.double-input-container select{
+    display: flex;
+    width: 100%;
+    padding: 14px 0px;
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+.tell-us-about-you-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.tell-us-title{
+    font-size: 24px;
+}
+.tell-us-about-you-content{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.input-container  textarea{
+    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 5px 0px;
+}
+.submit-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.submit-container input{
+    padding: 15px 25px;
+    background-color: blue;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 700;
+    border: blue;
+    border-radius: 3px;
+    opacity: 85%;
+    cursor: pointer;
+}
+.accept-condition-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0px;
+    justify-content: center;
+}
+.privacy-policy-link-text-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.privacy-policy-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 6px;
+}
+.privacy-policy-text p{
+    font-size: 16px;
+    color: #FFFFFF;
+    opacity: 70%;
+}
+
+/* media query */
+@media screen and (min-width:688px) and (max-width:910px){
+.flyTo-space-content-top{
+    padding: 0px 30px ;
+}
+.flyTo-space-title{
+    font-size: 70px;
+}
+}
+
+@media screen and (max-width:687px){
+.flyTo-space-content-top{
+    padding: 0px 20px ;
+}
+.flyTo-space-title{
+    font-size: 50px;
+}
+.flyTo-space-title2 p{
+    font-size: 26px;
+}  
+}

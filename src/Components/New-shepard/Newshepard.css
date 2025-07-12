@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.newshepard-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  padding-top: 65px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.video-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  top: 30%;
+  left: 7%;
+}
+.video-content h1{
+  font-size: 100px;
+  font-weight: 900;
+}
+.new-shepard-btn{
+color: white;
+border: 2px solid blue;
+padding: 14px 18px;
+margin-top: 18px;
+cursor: pointer;
+background-color: blue;
+font-weight: 700;
+letter-spacing: 2px;
+border-radius: 3px;
+}
+.play-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.play-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.new-shepard-hero-section{
+  padding: 64px 64px;
+  height: 90vh;
+  width: 100%;
+}
+.new-shepard-hero-container{
+  background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FHome_NS32-Apogee-Green.jpg&w=1920&q=75");
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-shepard-hero-text{
+  padding: 0px 94px;
+}
+.new-shepard-hero-title-1{
+  font-size: 72px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+/* meet-new-shepard-section goes here */
+.meet-new-shepard-section{
+  padding: 0px 30px 96px 30px  ;
+}
+.meet-new-shepard-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 33px;
+}
+.meet-new-shepard-title{
+  font-size: 48px;
+  color: #0033dd;
+  font-family: "myFont";
+  letter-spacing: 3px;
+}
+.meet-new-shepard-content{
+  padding: 0px 125px;
+  line-height: 35px;
+  font-size: 18px;
+  color: #000000;
+  font-family: "MyFont2";
+}
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url('../../assets/fonts/Roboto_Condensed-Thin.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyFont2';
+  src: local('MyFont2'), url('../../assets/fonts/Barlow-Regular.ttf') format('truetype');
+}
+
+/* new-shepard-rocket-section goes here */
+.new-shepard-rocket-container{
+  display: flex;
+  gap: 100px;
+  padding: 0px 70px 70px 70px;
+}
+.new-shepard-rocket-container-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.new-shepard-rocket-container-left img{
+  height: auto;
+  width: 550px; 
+}
+.new-shepard-rocket-container-right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@font-face {
+  font-family: 'MyFont3';
+  src: local('MyFont3'), url('../../assets/fonts/Michroma-Regular.ttf') format('truetype');
+}
+.rocket-part-title{
+  font-size: 24px;
+  color: #0033dd;
+  font-family: "MyFont3";
+}
+.new-shepard-rocket-container-right-data{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  line-height: 33px;
+  font-family: "MyFont2";
+  font-size: 17px;
+  color: #000000;
+  gap: 10px;
+  
+}
+
+@media screen and (min-width:688px) and (max-width:1024px){
+.new-shepard-hero-section{
+  width: 100%;
+  padding: 20px 20px;
+}  
+.video-content h1{
+  font-size: 70px;
+}
+.meet-new-shepard-section{
+  padding: 0px 30px 96px 30px  ;
+}
+.meet-new-shepard-container{
+  gap: 28px;
+}
+  .meet-new-shepard-content{
+  padding: 0px 0px;
+}
+
+.new-shepard-rocket-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.new-shepard-rocket-container-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.new-shepard-rocket-container-left img{
+  height:auto;
+  width:600px;
+  
+}
+}
+
+@media screen and (max-width:687px){
+.new-shepard-hero-section{
+  width: 100%;
+}   
+.video-content h1{
+  font-size: 55px;
+  font-weight: 800;
+}
+.new-shepard-hero-section{
+  padding: 35px 20px;
+}
+.new-shepard-hero-text{
+  padding: 0px 25px;
+}
+.new-shepard-hero-title-1{
+  font-size: 60px;
+} 
+.meet-new-shepard-section{
+  padding: 0px 30px 96px 30px  ;
+}
+.meet-new-shepard-container{
+  gap: 28px;
+}
+  .meet-new-shepard-content{
+  padding: 0px 0px;
+}
+
+.new-shepard-rocket-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.new-shepard-rocket-container-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.new-shepard-rocket-container-left img{
+  height: auto;
+  width: 380px;
+}
+.new-shepard-rocket-container-right-data{
+  padding: 20px 20px;
+  line-height: 25px;
+  font-size: 14px;
+  gap: 10px;
+  
+}
+}
+
+
+

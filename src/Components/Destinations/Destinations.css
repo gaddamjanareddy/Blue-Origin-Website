@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}
+.destinations-main-container {
+  background-color: black;
+  padding: 60px 0px;
+}
+.destinations-hero-container {
+  height: 90vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.destinations-hero-titles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+  color: white;
+}
+.destinations-hero-title {
+  font-size: 80px;
+  font-weight: 800;
+  color: #ffffff;
+}
+/* destinations-section-1 styles */
+
+.destinations-section-1 {
+  padding: 100px 0px 50px 0px;
+}
+.destinations-section-1-container {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+.destinations-section-1-text-container {
+  padding: 0px 145px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+.destinations-section-1-heading {
+  font-size: 36px;
+  font-weight: 100;
+}
+.destinations-section-1-text-description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+.destinations-section-1-text-description{
+    font-size: 18px;
+    line-height: 35px;
+}
+.destinations-section-2 {
+  height: 140vh;
+  width: 100%;
+  padding-top: 70px ;
+}
+.destinations-section-2-container {
+  width: 100%;
+  min-height: 125vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* destinations-section-3 */
+.destinations-section-3{
+  background-color: black;
+  color: #ffffff;  
+  padding: 150px 94px 0px 94px;
+}
+.destinations-section-3-container{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.destinations-section-3-content-div{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+.destinations-section-3-img-container{
+  display: flex;
+  
+}
+.destinations-section-3-img{
+  height: auto;
+  width: 525px;
+}
+.destinations-section-3-content-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.destinations-section-3-content-title-1{
+  font-size: 36px;
+  font-weight: 100;
+  line-height: 45px;
+}
+.destinations-section-3-content-text{
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+
+/* Tablet Devices */
+@media screen and (min-width: 688px) and (max-width: 910px) {
+  .destinations-hero-title {
+    font-size: 50px;
+  }
+
+  .destinations-section-1-text-container {
+    padding: 0px 40px;
+    gap: 60px;
+  }
+
+  .destinations-section-1-heading {
+    font-size: 28px;
+  }
+
+  .destinations-section-1-text-description {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .destinations-section-2 {
+    height: 120vh;
+    padding-top: 50px;
+  }
+  .destinations-section-2-container{
+    min-height: 100vh;
+  }
+
+  .destinations-section-3 {
+    padding: 50px 30px 0px 30px;
+  }
+
+  .destinations-section-3-content-div {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .destinations-section-3-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .destinations-section-3-content-title-1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 687px) {
+  .destinations-hero-title {
+    font-size: 36px;
+  }
+
+  .destinations-section-1 {
+    padding: 60px 0px 40px 0px;
+  }
+
+  .destinations-section-1-text-container {
+    padding: 0px 20px;
+    gap: 40px;
+  }
+
+  .destinations-section-1-heading {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .destinations-section-1-text-description-container {
+    text-align: left;
+  }
+
+  .destinations-section-1-text-description {
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .destinations-section-2 {
+    height: 120vh;  
+    padding: 50px 20px;
+  }
+  .destinations-section-2-container{
+    min-height: 80vh;
+  }
+
+  .destinations-section-3 {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .destinations-section-3-content-div {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .destinations-section-3-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .destinations-section-3-content-title-1 {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .destinations-section-3-content-text {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+  }
+}
+

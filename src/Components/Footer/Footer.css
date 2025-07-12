@@ -1,0 +1,233 @@
+.social-media-container{
+    background-color: #0033dd;
+    color: white;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+    padding: 0px 25px;
+
+}
+.follow-text{
+    font-size: 15px;
+    font-weight:normal;
+    letter-spacing: 2px;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.social-media li{
+    cursor: pointer;
+    color: #ffffff;
+    border: 2px solid transparent;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    border-radius: 50%;
+}
+.social-media li:hover{
+    border: 2px solid white;
+    
+}
+
+.footer-middle{
+    background-color: #202020;
+    padding: 0px 30px 0px 30px;
+}
+.footer-copy-rights{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-bottom: 2px solid #3b3b3b;
+    padding: 50px 0px 50px 0px;
+    
+}
+.feather{
+    height: 112px;
+    width: 220px;
+}
+.policy-text{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+.footer-copy-rights-text{
+    color: #c8c8c8;
+    font-size: 14px;
+}
+
+/* footer-navigation-pages-section styling */
+
+.footer-navigation-pages{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+    gap: 45px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.footer-navigation-pages li a{
+    position: relative;
+    color: #DADADA;
+    font-size: 16px;
+    text-decoration: none;
+}
+.footer-navigation-pages li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.1s ease-in-out;
+}
+.footer-navigation-pages li a:hover::after{
+    width: 100%;
+}
+.font-preference-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.font-preference-container a{
+    color: #DADADA;
+    text-decoration: none;
+}
+.font-preference-btn{
+    height: 46px;
+    width: 228px;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #DADADA;
+    border: 2px solid #DADADA;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 17px;
+}
+.font-preference-btn option{
+    background-color: rgb(0, 0, 0);
+    color: #DADADA;
+}
+
+/* footer bottom styles goes here */
+
+.footer-bottom{
+    padding: 0px 30px 50px 30px;
+    background-color: #2A2A2A;
+    color: #DADADA;
+}
+.footer-bottom-section{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px 0px 70px 0px;   
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.subscribe{
+    font-size:20px;
+    font-weight: 500;
+}
+.subscribe-text{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.Form-email-label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.requred-indicator{
+    text-decoration: none;
+    font-size:  20px;
+    font-weight:bolder;
+}
+.Form-textInput{
+    padding: 12px 0px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 3px solid #DADADA;
+    color: #DADADA;
+    padding-left: 10px;
+    font-size: 18px;
+    
+}
+.subscribe-text p{
+    font-size: 15px;
+    line-height: 25px;
+}
+.form-checkbox-label{
+    display: flex;
+    gap: 15px;
+}
+
+.form-checkbox-label input[type="checkbox"] {
+  appearance: none;           
+  min-width: 20px;
+  min-height: 20px;
+  width: 20px;
+  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
+  border: 2px solid #DADADA;     
+  cursor: pointer;
+  position: relative;
+  margin-top: 6px;         
+  
+}
+
+.form-checkbox-label input[type="checkbox"]:checked::before {
+  content: "";
+  position: absolute;
+  inset: 2px;                                            
+  background: #DADADA;          
+}
+.privacy-policy-link-text p{
+    font-size: 16px;
+    line-height: 25px;
+    color: #DADADA;
+    
+}
+.privacy-policy-link{
+    color: #DADADA;
+    margin: 0px 5px ;
+}
+.submit-btn button{
+    padding: 6px 10px;
+    border: 2px solid #DADADA;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    font-size:13px ;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* media query */
+@media screen and (max-width:687px){
+.social-media-container{
+    padding: 0px 25px;
+}
+.follow-text{
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.social-media li{
+    padding: 8px 8px;
+}
+.social-media li:hover{
+    border: 2px solid white; 
+}
+}
+
+
+

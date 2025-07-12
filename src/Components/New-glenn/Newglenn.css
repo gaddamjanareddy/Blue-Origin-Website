@@ -1,0 +1,251 @@
+html, body {
+  overflow-x: hidden;
+}
+.newglenn-main-container {
+  padding: 55px 0px;
+}
+.newglenn-hero-container {
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.newglenn-hero-titles-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0px 350px 0px 96px;
+  color: white;
+}
+.newglenn-hero-title {
+  font-size: 14px;
+  color: #ffffff;
+}
+.newglenn-hero-subtitle {
+  font-size: 65px;
+  font-weight: 800;
+  line-height: 70px;
+}
+/* newglenn-section-1 styles */
+
+.newglenn-section-1 {
+  background-color: #0033dd;
+  padding: 0px 30px;
+}
+.newglenn-section-1-container {
+  height: 63vh;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+}
+.newglenn-section-1-text-container {
+  padding: 0px 95px;
+}
+.newglenn-section-1-text {
+  font-size: 48px;
+}
+.neglenn-section-1-btn {
+  background-color: #ffffff;
+  color: #0033dd;
+  border: 2px solid white;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.newglenn-section-2 {
+  padding: 90px 90px;
+  height: 90vh;
+  width: 100%;
+}
+.newglenn-section-2-container {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.newglenn-section-2-text-container{
+  padding: 0px 94px
+}
+.newglenn-section-2-title-1{
+  font-size: 14px;
+  color: #FFFFFF;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+.newglenn-section-2-title-2{
+  font-size: 72px;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+.newglenn-section-2-btn{
+  background-color: rgba(0, 0, 0, 0);
+  color: #FFFFFF;
+  border: 2px solid white;
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* newglenn-section-3 */
+.newglenn-section-3{
+  padding: 0px 94px;
+}
+.newglenn-section-3-container{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.newglenn-section-3-content-div{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 0px 0px 94px 0px;
+}
+.newglenn-section-3-img-container{
+  display: flex;
+  
+}
+.newglenn-section-3-img{
+  height: 680px;
+  width: 535px;
+}
+.newglenn-section-3-content-text-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+}
+.newglenn-section-3-content-title-1{
+  font-size: 36px;
+  color: #0033dd;
+  line-height: 45px;
+}
+.newglenn-section-3-content-text{
+  font-size: 18px;
+  line-height: 30px;
+}
+
+
+
+
+
+/* Tablet*/
+@media screen and (min-width: 688px) and (max-width: 910px) {
+  .newglenn-hero-titles-container {
+    padding: 0px 50px;
+    gap: 14px;
+  }
+  .newglenn-hero-subtitle {
+    font-size: 42px;
+    line-height: 50px;
+  }
+  .newglenn-section-1-container{
+    height: 40vh;
+  }
+  .newglenn-section-1-text-container {
+    padding: 0px 40px;
+  }
+  .newglenn-section-1-text {
+    font-size: 32px;
+  }
+
+  .newglenn-section-2 {
+    padding: 50px 30px;
+    height: 65vh;
+  }
+  .newglenn-section-2-text-container {
+    padding: 0px 30px;
+  }
+  .newglenn-section-2-title-2 {
+    font-size: 48px;
+  }
+
+  .newglenn-section-3 {
+    padding: 0px 30px;
+  }
+  .newglenn-section-3-content-div {
+    flex-direction: column;
+    gap: 40px;
+    padding-bottom: 60px;
+  }
+  .newglenn-section-3-img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 687px) {
+  .newglenn-hero-titles-container {
+    padding: 0px 25px;
+    gap: 12px;
+  }
+  .newglenn-hero-title {
+    font-size: 12px;
+  }
+  .newglenn-hero-subtitle {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .newglenn-section-1-container{
+    height: 40vh;
+  }
+  .newglenn-section-1-text-container {
+    padding: 0px 15px;
+  }
+  .newglenn-section-1-text {
+    font-size: 26px;
+    text-align: center;
+  }
+  .neglenn-section-1-btn {
+    padding: 12px 14px;
+    font-size: 12px;
+  }
+
+  .newglenn-section-2 {
+    padding: 40px 20px;
+    height: 70vh;
+  }
+  .newglenn-section-2-text-container {
+    padding: 0px 15px;
+  }
+  .newglenn-section-2-title-2 {
+    font-size: 38px;
+  }
+
+  .newglenn-section-3 {
+    padding: 0px 20px;
+  }
+  .newglenn-section-3-content-div {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 50px;
+  }
+  .newglenn-section-3-img {
+    width: 100%;
+    height: auto;
+  }
+  .newglenn-section-3-content-title-1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .newglenn-section-3-content-text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+

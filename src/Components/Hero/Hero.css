@@ -1,0 +1,102 @@
+.hero-container{
+    background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FSunrise_NS-31_Aerial.jpg&w=1920&q=75");
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 65px;
+}
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 96px;
+  color: white;
+}
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url('../../assets/fonts/Roboto_Condensed-ExtraLight.ttf') format('truetype');
+}
+.hero-title-1{
+font-size: 70px;
+font-weight:300;
+font-family: 'MyFont';
+}
+.hero-title-2{
+font-size: 65px;
+font-weight: 800;
+margin-top: -20px;
+}
+.btn-div{
+  display: flex;
+  gap: 20px;
+}
+.btn{
+background-color: rgba(0,0,0,0);
+color: white;
+border: 2px solid white;
+padding: 14px 18px;
+margin-top: 15px;
+cursor: pointer;
+}
+
+#hero-container-2{
+  background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FHome_New-Glenn-1.jpg&w=1920&q=75");
+}
+#hero-container-3{
+  background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FNS28_ECalandrelli_HomepageHero.jpg&w=1920&q=75");
+}
+#hero-container-4{
+  background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FBE-4Engine_Home-Hero.jpeg&w=1920&q=75");
+}
+#hero-container-5{
+  background-image: url("https://www.blueorigin.com/_next/image?url=https%3A%2F%2Fd1o72l87sylvqg.cloudfront.net%2Fblue-origin%2FHome_HBR.jpg&w=1920&q=75");
+}
+
+/* media query */
+
+@media screen and (min-width:688px) and (max-width:910px) {
+.hero-container{
+  width: 100%;
+} 
+.hero-text{
+  padding: 0px 55px;
+} 
+.hero-title-1{
+font-size: 55px;
+}
+.hero-title-2{
+font-size: 55px;
+}
+.btn{
+padding: 12px 16px;
+margin-top: 20px;
+} 
+}
+
+@media screen and (max-width:687px) {
+.hero-container{
+  width: 100%;
+}
+
+.hero-text{
+  padding: 0px 30px;
+  color: white;
+}  
+.hero-title-1{
+font-size: 45px;
+}
+.hero-title-2{
+font-size: 45px;
+}
+.btn{
+padding: 8px 12px;
+margin-top: 10px;
+} 
+  
+}
+

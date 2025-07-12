@@ -1,0 +1,220 @@
+/* Navbar remains same */
+.navbar {
+  background-color: #0033dd;
+  display: flex;
+  height: 94px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px 34px 0px 24px;
+  position: fixed;
+  z-index: 1000;
+}
+/* .left-nav{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+} */
+
+/* Right nav (hamburger in blue navbar) */
+.right-nav {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+/*  hamburger */
+.hamburger {
+  width: 30px;
+  height: 16px;
+  position: relative;
+  transition: 0.4s ease;
+}
+
+.hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: white;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburger span:first-child {
+  top: 0;
+}
+
+.hamburger span:last-child {
+  bottom: 0;
+}
+
+
+.hamburger.open span:first-child {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.open span:last-child {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+
+.floating-hamburger {
+  position: fixed;
+  top: 40px;
+  right: 34px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1100;
+  display: none;
+}
+
+.floating-hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: white;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.floating-hamburger span:first-child {
+  top: 0;
+}
+
+.floating-hamburger span:last-child {
+  bottom: 0;
+}
+
+.floating-hamburger.open {
+  display: block;
+}
+
+.floating-hamburger.open span:first-child {
+  transform: rotate(45deg);
+  top: 10px;
+}
+
+.floating-hamburger.open span:last-child {
+  transform: rotate(-45deg);
+  bottom: 9px;
+}
+
+
+.side-menu-left {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  height: 100vh;
+  width: 100%;
+  background-color: #444;
+  color:snow;
+  transition: left 0.7s ease;
+  z-index: 999;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  overflow-y: auto; 
+}
+.side-menu-left::-webkit-scrollbar {
+  width: 6px;
+}
+
+.side-menu-left::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
+}
+.side-menu-left::-webkit-scrollbar-track {
+  background: #111;
+}
+.side-menu-left.open {
+  left: 0;
+}
+.menu-items {
+  display:flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 50px;
+  color: #dadada;
+  list-style: none;
+}
+
+.menu-items li {
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  letter-spacing: 2px;
+  align-self: flex-start;
+  width: fit-content;
+  color: #FFFFFF;
+  list-style-type: none;
+}
+.active li{
+  border-bottom: 2px solid white;
+}
+.navlink{
+  text-decoration: none;
+}
+
+.menu-items li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.1s ease-in-out;
+}
+.menu-items li:hover::after{
+  width: 100%;
+}
+.bottom-nav{
+    background-color: #0033dd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    
+}
+.fly-to-space{
+    font-size: 14px;
+    font-weight: bold;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    position: relative;
+    cursor: pointer;
+    color: white;
+}
+.fly-to-space::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.1s ease-in-out;
+}
+.fly-to-space:hover::after{
+  width: 100%;
+}
+.active p{
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+}
+
+
+
+
+
