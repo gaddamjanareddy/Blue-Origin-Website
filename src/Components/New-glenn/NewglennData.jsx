@@ -1,5 +1,5 @@
 import heroImage from '../../assets/newglenn/NewGlenn.jpg';
-import section2Image from '../../assets/newglenn/newglenn_latestflight-ng1.jpg'; 
+import section2Image from '../../assets/Newglenn/newglenn_latestflight-ng1.jpg'; 
 import section3Image1 from '../../assets/NewGlenn/newglenn_reusable-for-affordability.jpg'
 import section3Image2 from '../../assets/NewGlenn/newglenn_twice-volume.jpg' 
 import section3Image3 from '../../assets/NewGlenn/newglenn_single-configuration.jpg'
