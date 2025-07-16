@@ -1,33 +1,33 @@
-import React, { useEffect, useState } from 'react'
+import React, {} from 'react'
 import "./Footer.css"
-import { useFont } from '../context/fontContext';
+// import { useFont } from '../context/fontContext';
 import { NavLink } from "react-router-dom";
 
 
 const Footer = () => {
-    const { selectedFont, setSelectedFont } = useFont();
-  const [localFont, setLocalFont] = useState(selectedFont);
+    // const { selectedFont, setSelectedFont } = useFont();
+//   const [localFont, setLocalFont] = useState(selectedFont);
 
-  const handleChange = (e) => {
-    const selected = e.target.value;
-    setLocalFont(selected);            // local state for immediate UI response (optional)
-    setSelectedFont(selected);         // global context update
-    localStorage.setItem('selectedFont', selected); // store in localStorage
-  };
+//   const handleChange = (e) => {
+//     const selected = e.target.value;
+//     setLocalFont(selected);            // local state for immediate UI response (optional)
+//     // setSelectedFont(selected);         // global context update
+//     localStorage.setItem('selectedFont', selected); // store in localStorage
+//   };
 
-  useEffect(() => {
-    // Apply the font globally
-    switch (localFont) {
-      case 'atkinson-hyperlegible':
-        document.body.style.fontFamily = `'Atkinson Hyperlegible', sans-serif`;
-        break;
-      case 'open-dyslexic':
-        document.body.style.fontFamily = `'OpenDyslexic', sans-serif`;
-        break;
-      default:
-        document.body.style.fontFamily = `'Orbitron', sans-serif`;
-    }
-  }, [localFont]);
+//   useEffect(() => {
+//     // Apply the font globally
+//     switch (localFont) {
+//       case 'atkinson-hyperlegible':
+//         document.body.style.fontFamily = `'Atkinson Hyperlegible', sans-serif`;
+//         break;
+//       case 'open-dyslexic':
+//         document.body.style.fontFamily = `'OpenDyslexic', sans-serif`;
+//         break;
+//       default:
+//         document.body.style.fontFamily = `'Orbitron', sans-serif`;
+//     }
+//   }, [localFont]);
 
    
   return (
@@ -71,7 +71,7 @@ const Footer = () => {
                     <li><a href="#">Cookie Settings</a></li>
                 <div className="font-preference-container">
                     <a href="#">Font Preference</a>
-                        <select value={localFont} onChange={handleChange} className='font-preference-btn'>
+                        <select   className='font-preference-btn'>
                             <option value="No Preference">No Preference (Default)</option>
                             <option value="atkinson-hyperlegible">Atkinson Hyperlegible</option>
                             <option value="open-dyslexic">Open Dyslexic</option>
