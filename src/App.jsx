@@ -1,18 +1,17 @@
-import React, { } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './Components/Navbar/Navbar';
-import Hero from './Components/Hero/Hero';
-import Footer from './Components/Footer/Footer'
+const Navbar = lazy(() => import('./Components/Navbar/Navbar'));
+const Hero = lazy(() => import('./Components/Hero/Hero'));
+const Footer = lazy(() => import('./Components/Footer/Footer'));
 import "./App.css"
-import Bluemoon from './Components/Blue-moon/Bluemoon';
-import Bluering from './Components/Blue-Ring/Bluering';
-import Destinations from './Components/Destinations/Destinations';
-import Engines from './Components/Engines/Engines';
-import Newglenn from './Components/New-glenn/Newglenn';
-import Newshepard from './Components/New-shepard/Newshepard';
-import Shop from './Components/shop/Shop'
-import Flytospace from './Components/Fly-to-space/Flytospace';
-
+const Bluemoon = lazy(() => import('./Components/Blue-moon/Bluemoon'));
+const Bluering = lazy(() => import('./Components/Blue-Ring/Bluering'));
+const Destinations = lazy(() => import('./Components/Destinations/Destinations'));
+const Engines = lazy(() => import('./Components/Engines/Engines'));
+const Newglenn = lazy(() => import('./Components/New-glenn/Newglenn'));
+const Newshepard = lazy(() => import('./Components/New-shepard/Newshepard'));
+const Shop = lazy(() => import('./Components/shop/Shop'));
+const Flytospace = lazy(() => import('./Components/Fly-to-space/Flytospace'));
 
 
 
@@ -20,6 +19,7 @@ const App = () => {
   return (
     <>
     <BrowserRouter>
+    <Suspense fallback={<div style={{display:'flex',alignItems:'center', justifyContent:'center'}}><h1 style={{color:'#0033dd'}}>Loading...</h1></div>}>
     <Routes>
       <Route path="/" element={<Hero/>} ></Route>
       <Route path="/Newshepard" element={<Newshepard/>}></Route>
@@ -33,6 +33,7 @@ const App = () => {
 
       <Route path="/Flytospace" element={<Flytospace/>}></Route>
     </Routes>
+    </Suspense>
     </BrowserRouter>
     
     </>
