@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ShoppingCart, X, Plus, Minus } from 'lucide-react';
 import { shopData } from './shopData';
 import './shop.css';
@@ -10,75 +10,46 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 
+import { CartContext } from './CartContext';
+
 const Shop = () => {
-  const [cartItems, setCartItems] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 6;
+
+  
+  const {
+    cartItems,
+    addToCart,
+    removeFromCart,
+    updateQuantity,
+    getTotalItems,
+    getTotalPrice
+  } = useContext(CartContext);
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = shopData.slice(indexOfFirstProduct, indexOfLastProduct);
   const totalPages = Math.ceil(shopData.length / productsPerPage);
 
-
   const carouselSettings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    { breakpoint: 600, settings: { slidesToShow: 1 } }
-  ]
-};
-
-useEffect(() => {
-  AOS.init({
-    duration: 3000,  
-    once: true        
-  });
-},[])
-
-
-
-  const addToCart = (product) => {
-    const existingItem = cartItems.find(item => item.id === product.id);
-    if (existingItem) {
-      setCartItems(cartItems.map(item => 
-        item.id === product.id 
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
-      ));
-    } else {
-      setCartItems([...cartItems, { ...product, quantity: 1 }]);
-    }
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } }
+    ]
   };
 
-  const removeFromCart = (productId) => {
-    setCartItems(cartItems.filter(item => item.id !== productId));
-  };
-
-  const updateQuantity = (productId, newQuantity) => {
-    if (newQuantity === 0) {
-      removeFromCart(productId);
-    } else {
-      setCartItems(cartItems.map(item =>
-        item.id === productId
-          ? { ...item, quantity: newQuantity }
-          : item
-      ));
-    }
-  };
-
-  const getTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-  };
-
-  const getTotalItems = () => {
-    return cartItems.reduce((total, item) => total + item.quantity, 0);
-  };
+  useEffect(() => {
+    AOS.init({
+      duration: 3000,
+      once: true
+    });
+  }, []);
 
   return (
     <div className="shop-container">
@@ -91,10 +62,7 @@ useEffect(() => {
           </NavLink>
 
           <div className="header-actions">
-            <button 
-              className="cart-button"
-              onClick={() => setIsCartOpen(true)}
-            >
+            <button className="cart-button" onClick={() => setIsCartOpen(true)}>
               <ShoppingCart size={20} />
               {getTotalItems() > 0 && (
                 <span className="cart-badge">{getTotalItems()}</span>
@@ -109,12 +77,14 @@ useEffect(() => {
         <div className="hero-content" data-aos="fade-up">
           <h2 className="hero-title">Explore the Universe</h2>
           <p className="hero-subtitle">Premium space merchandise and collectibles</p>
-        <a href="#products-section"><button className="hero-cta">Shop Collection</button></a>
+          <a href="#products-section">
+            <button className="hero-cta">Shop Collection</button>
+          </a>
         </div>
         <div className="hero-background"></div>
       </section>
-      
-      {/* carousel-section */}
+
+      {/* Carousel Section */}
       <section className="carousel-section">
         <h2 className="section-title">New Arrivals</h2>
         <Slider {...carouselSettings}>
@@ -134,20 +104,17 @@ useEffect(() => {
         </Slider>
       </section>
 
-      {/* Products */}
-      <section className="products-section" id='products-section'>
+      {/* Products Section */}
+      <section className="products-section" id="products-section">
         <div className="container">
           <h2 className="section-title">Featured Products</h2>
           <div className="products-grid">
             {currentProducts.map(product => (
-                <div key={product.id} className="product-card">
+              <div key={product.id} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
                   <div className="product-overlay">
-                    <button 
-                      className="add-to-cart-btn"
-                      onClick={() => addToCart(product)}
-                    >
+                    <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
                       Add to Cart
                     </button>
                   </div>
@@ -163,19 +130,20 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* pagination */}
-          <section className="pagination-section">
-            <div className="pagination">
-              {Array.from({ length: totalPages }, (_, i) => (
-                <button key={i + 1} 
-                  className={`page-button ${currentPage === i + 1 ? 'active' : ''}`}
-                  onClick={() => setCurrentPage(i + 1)}>
-                {i + 1}
-                </button>
-              ))}
-            </div>
-          </section>
-      
+      {/* Pagination */}
+      <section className="pagination-section">
+        <div className="pagination">
+          {Array.from({ length: totalPages }, (_, i) => (
+            <button
+              key={i + 1}
+              className={`page-button ${currentPage === i + 1 ? 'active' : ''}`}
+              onClick={() => setCurrentPage(i + 1)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
+      </section>
 
       {/* Cart Sidebar */}
       <div className={`cart-sidebar ${isCartOpen ? 'cart-open' : ''}`}>
@@ -183,14 +151,11 @@ useEffect(() => {
         <div className="cart-content">
           <div className="cart-header">
             <h3>Shopping Cart</h3>
-            <button 
-              className="close-cart"
-              onClick={() => setIsCartOpen(false)}
-            >
+            <button className="close-cart" onClick={() => setIsCartOpen(false)}>
               <X size={20} />
             </button>
           </div>
-          
+
           <div className="cart-items">
             {cartItems.length === 0 ? (
               <p className="empty-cart">Your cart is empty</p>
@@ -211,17 +176,14 @@ useEffect(() => {
                       </button>
                     </div>
                   </div>
-                  <button 
-                    className="remove-item"
-                    onClick={() => removeFromCart(item.id)}
-                  >
+                  <button className="remove-item" onClick={() => removeFromCart(item.id)}>
                     <X size={16} />
                   </button>
                 </div>
               ))
             )}
           </div>
-          
+
           {cartItems.length > 0 && (
             <div className="cart-footer">
               <div className="cart-total">

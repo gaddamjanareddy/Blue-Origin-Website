@@ -4,6 +4,7 @@ const Navbar = lazy(() => import('./Components/Navbar/Navbar'));
 const Hero = lazy(() => import('./Components/Hero/Hero'));
 const Footer = lazy(() => import('./Components/Footer/Footer'));
 import "./App.css"
+import { CartProvider } from './context/cartProvider';
 const Bluemoon = lazy(() => import('./Components/Blue-moon/Bluemoon'));
 const Bluering = lazy(() => import('./Components/Blue-Ring/Bluering'));
 const Destinations = lazy(() => import('./Components/Destinations/Destinations'));
@@ -19,6 +20,7 @@ const App = () => {
   return (
     <>
     <BrowserRouter>
+    <CartProvider>
     <Suspense fallback={<div style={{display:'flex',alignItems:'center', justifyContent:'center'}}><h1 style={{color:'#0033dd'}}>Loading...</h1></div>}>
     <Routes>
       <Route path="/" element={<Hero/>} ></Route>
@@ -34,6 +36,7 @@ const App = () => {
       <Route path="/Flytospace" element={<Flytospace/>}></Route>
     </Routes>
     </Suspense>
+    </CartProvider>
     </BrowserRouter>
     
     </>
